@@ -13,6 +13,7 @@
     "@expo-google-fonts/oswald": "^0.2.3",
     "@react-navigation/bottom-tabs": "^6.5.19",
     "@react-navigation/native": "^6.1.16",
+    "camelize": "^1.0.1",
     "expo": "~50.0.11",
     "expo-font": "~11.10.3",
     "expo-status-bar": "~1.11.1",
