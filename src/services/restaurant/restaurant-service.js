@@ -22,6 +22,5 @@ export const restaurantTransform = ({ results = [] }) => {
       isClosedTemporarily: restaurant.business_status === 'CLOSED_TEMPORARILY',
     };
   });
-  console.log(mappedResults);
   return camelize(mappedResults);
 };
