@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import MapView from 'react-native-maps';
-import { View, Text } from 'react-native';
 import styled from 'styled-components/native';
+import MapSearchComponent from '../components/MapSeachComponent';
 
 const Map = styled(MapView)`
   height: 100%;
@@ -9,6 +9,11 @@ const Map = styled(MapView)`
 `;
 
 const MapScreen = () => {
-  return <Map />;
+  return (
+    <>
+      <MapSearchComponent />
+      <Map />
+    </>
+  );
 };
 export default MapScreen;
