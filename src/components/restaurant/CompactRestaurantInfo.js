@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import { WebView } from 'react-native-webview';
-import { View, TouchableOpacity, Platform } from 'react-native';
+import { Platform } from 'react-native';
 import { Text } from '../typography/TypographyComponent';
 
 const CompactImage = styled.Image`
