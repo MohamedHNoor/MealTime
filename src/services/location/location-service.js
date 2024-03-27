@@ -15,5 +15,5 @@ export const locationTransform = (result) => {
   const formatResponse = camelize(result);
   const { geometry = {} } = formatResponse.results[0];
   const { lat, lng } = geometry.location;
-  return { lat, lng };
+  return { lat, lng, viewport: geometry.viewport };
 };
