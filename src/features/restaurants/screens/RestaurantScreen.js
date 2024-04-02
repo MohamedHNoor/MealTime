@@ -6,7 +6,6 @@ import RestaurantInfoComponent from '../components/RestaurantInfoComponent';
 import { Spacer } from '../../../components/spacer/SpacerComponent';
 import { SafeArea } from '../../../components/utility/SafeAreaComponent';
 import { RestaurantsContext } from '../../../services/restaurant/restaurant-context';
-import { FavouritesContext } from '../../../services/favourites/favourites.context';
 import { ActivityIndicator, MD2Colors } from 'react-native-paper';
 import RestaurantSearchComponent from '../components/RestaurantSearchComponent';
 
