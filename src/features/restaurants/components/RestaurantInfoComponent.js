@@ -13,6 +13,7 @@ import {
   Info,
   Rating,
 } from './restaurant-info-card-styles';
+import FavouritesComponent from '../../../components/favourites/FavouritesComponent';
 
 const RestaurantInfoComponent = ({ restaurant = {} }) => {
   const {
@@ -30,6 +31,7 @@ const RestaurantInfoComponent = ({ restaurant = {} }) => {
   const ratingArray = Array.from(new Array(Math.floor(rating)));
   return (
     <RestaurantCard>
+      <FavouritesComponent restaurant={restaurant} />
       <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
       <Info>
         <Text variant='label'>{name}</Text>
