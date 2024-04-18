@@ -3,11 +3,11 @@ import { View, Text } from 'react-native';
 import styled from 'styled-components/native';
 import { Searchbar } from 'react-native-paper';
 import { LocationContext } from '../../../services/location/location-context';
+import { SafeArea } from '../../../components/utility/SafeAreaComponent';
 
 const SearchContainer = styled.View`
   padding: ${(props) => props.theme.space[2]};
   position: absolute;
-  /* top: 20px; */
   z-index: 999;
   width: 100%;
 `;
@@ -22,15 +22,17 @@ const MapSearchComponent = () => {
 
   return (
     <SearchContainer>
-      <Searchbar
-        placeholder='Search'
-        icon='map'
-        value={searchKeyword}
-        onSubmitEditing={() => search(searchKeyword)}
-        onChangeText={(text) => {
-          setSearchKeyword(text);
-        }}
-      />
+      <SafeArea>
+        <Searchbar
+          placeholder='Search'
+          icon='map'
+          value={searchKeyword}
+          onSubmitEditing={() => search(searchKeyword)}
+          onChangeText={(text) => {
+            setSearchKeyword(text);
+          }}
+        />
+      </SafeArea>
     </SearchContainer>
   );
 };
