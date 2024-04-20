@@ -10,15 +10,15 @@ const defaultTextStyles = (theme) => `
 `;
 
 const body = (theme) => `
- font-size: ${theme.fontSizes.body}
+ font-size: ${theme.fontSizes.body};
 `;
 
 const hint = (theme) => `
- font-size: ${theme.fontSizes.body}
+ font-size: ${theme.fontSizes.body};
 `;
 
 const error = (theme) => `
- color: ${theme.colors.text.error}
+ color: ${theme.colors.text.error};
 `;
 
 const caption = (theme) => `
@@ -41,8 +41,8 @@ const variants = {
 };
 
 export const Text = styled.Text`
-  ${({ theme }) => defaultTextStyles(theme)}
-  ${({ variant, theme }) => variants[variant](theme)}
+  ${({ theme }) => defaultTextStyles(theme)};
+  ${({ variant, theme }) => variants[variant](theme)};
 `;
 
 Text.defaultProps = {

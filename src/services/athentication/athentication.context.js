@@ -11,11 +11,15 @@ export const AuthenticationContextProvider = ({ children }) => {
   const onLogin = async (email, password) => {
     setIsLoading(true);
     try {
-      const u = await loginRequest(email, password);
-      setUser(u);
+      const userCredential = await loginRequest(email, password);
+      setUser(userCredential);
       setIsLoading(false);
     } catch (err) {
-      setError(err);
+      setIsLoading(false);
+      const errorMessage = err.code
+        ? err.message
+        : 'An error occurred. Please try again.';
+      setError(errorMessage);
     }
   };
 

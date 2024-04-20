@@ -13,7 +13,7 @@ const AccountScreen = ({ navigation }) => {
       <AccountCover />
       <AccountContainer>
         <AuthButton
-          icon='lock-open-outline'
+          icon='email'
           mode='contained'
           onPress={() => navigation.navigate('Login')}
         >
@@ -21,7 +21,7 @@ const AccountScreen = ({ navigation }) => {
         </AuthButton>
         <Spacer size='large'>
           <AuthButton
-            icon='lock-open-outline'
+            icon='email'
             mode='contained'
             onPress={() => navigation.navigate('Register')}
           >
