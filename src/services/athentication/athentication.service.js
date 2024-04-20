@@ -1,5 +1,10 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+} from 'firebase/auth';
+import { err } from 'react-native-svg';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBBx0wWX4FXfLDBey7_5LvSUdsZCqgUJjc',
@@ -27,5 +32,25 @@ export const loginRequest = async (email, password) => {
   } catch (error) {
     console.error('Login failed:', error.code, error.message);
     throw error; // Re-throw the error to handle it in the calling function if needed
+  }
+};
+
+export const registerUser = async (email, password, confirmPassword) => {
+  // check if password match
+  if (password !== confirmPassword) {
+    throw new Error('Password do not match');
+  }
+  try {
+    // create user with email and password
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    // user registration successful
+    const user = userCredential.user;
+    return user;
+  } catch (error) {
+    throw error;
   }
 };

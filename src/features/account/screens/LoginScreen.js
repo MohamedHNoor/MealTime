@@ -38,7 +38,6 @@ const LoginScreen = ({ navigation }) => {
             textAlignVertical='password'
             secureTextEntry
             autoCapitalize='none'
-            secure
             onChangeText={(p) => setPassword(p)}
           />
         </Spacer>
